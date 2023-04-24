@@ -123,7 +123,7 @@
     }
 
     .team-members {
-        @apply cos-container py-12 md:py-28
+        @apply cos-container mt-16 md:mt-28
     }
 
     .team-members__detail {
@@ -131,7 +131,7 @@
     }
 
     .reviews {
-        @apply cos-container 
+        @apply cos-container mt-16 md:mt-28
     }
 
     .reviewer {
@@ -154,7 +154,11 @@
         @apply mt-5 text-lg font-semibold hidden md:block
     }
 
-    .news {
+    .news{
+        @apply cos-container
+    }
+
+    .news__detail {
         @apply mt-8 md:mt-16 flex justify-between gap-6 overflow-x-scroll overscroll-x-contain [&>*]:min-w-[16rem]
     }
 
@@ -179,7 +183,7 @@
     }
 
     .subscription {
-        @apply pl-4 sm:pl-8 md:pl-10 bscreen:pl-14 lg:pl-20 flex flex-col md:flex-row md:justify-between md:items-center bg-secondary-100
+        @apply mt-16 md:mt-28 pl-4 sm:pl-8 md:pl-10 bscreen:pl-14 lg:pl-20 flex flex-col md:flex-row md:justify-between md:items-center bg-secondary-100
     }
 
     .subscription__heading {

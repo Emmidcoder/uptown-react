@@ -6,6 +6,9 @@ import Apartment from './component/Apartment';
 import Services from './component/Services';
 import TeamMembers from './component/TeamMember';
 import Reviews from './component/Reviews';
+import News from './component/News';
+import Subscription from './component/Subscription';
+import Footer from './component/Footer';
 
 function App() {
   useEffect(() => {
@@ -27,7 +30,13 @@ function App() {
       
       <TeamMembers />
       
-      <Reviews/>
+      <Reviews />
+      
+      <News />
+
+      <Subscription />
+      
+      <Footer/>
     </React.Fragment>
   );
 }

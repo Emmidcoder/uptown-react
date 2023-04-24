@@ -3,20 +3,20 @@ import React from "react";
 const NavBar = () => {
     
     return (
-        <div class="nav-bar">
-            <div class="logo">
-                <img class="w-full" src={require('../img/logo.png')} alt="logo" />
+        <div className="nav-bar">
+            <div className="logo">
+                <img className="w-full" src={require('../img/logo.png')} alt="logo" />
             </div>
 
-            <nav class="small-nav">
-                <div class="hand-burger">&nbsp;</div>
-                <div class="hand-burger">&nbsp;</div>
-                <div class="hand-burger">&nbsp;</div>
+            <nav className="small-nav">
+                <div className="hand-burger">&nbsp;</div>
+                <div className="hand-burger">&nbsp;</div>
+                <div className="hand-burger">&nbsp;</div>
             </nav>
 
-            <nav class="big-nav">
-                <ul class="big-nav-items">
-                    <li class="font-bold">
+            <nav className="big-nav">
+                <ul className="big-nav-items">
+                    <li className="font-bold">
                         <a href="/">Home</a>
                     </li>
                     <li>
@@ -31,9 +31,9 @@ const NavBar = () => {
                 </ul>
             </nav>
 
-            <div class="log">
-                <button class="btn-signin">Sign in</button>
-                <button class="btn-fill">Sign up</button>
+            <div className="log">
+                <button className="btn-signin">Sign in</button>
+                <button className="btn-fill">Sign up</button>
             </div>
         </div>
     )
