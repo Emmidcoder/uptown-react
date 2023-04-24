@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import Header from './component/Header';
+import PropertiesDetails from './component/PropertieDetails';
+import TrusteeCompanies from './component/TrusteeCompanies';
+import Apartment from './component/Apartment';
+import Services from './component/Services';
+import TeamMembers from './component/TeamMember';
+import Reviews from './component/Reviews';
 
 function App() {
+  useEffect(() => {
+    document.body.classList.add('body')
+  },[])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header />
+
+      <PropertiesDetails />
+      
+      <TrusteeCompanies />
+      
+      <Apartment />
+      
+      <Services />
+      
+      <TeamMembers />
+      
+      <Reviews/>
+    </React.Fragment>
   );
 }
 
