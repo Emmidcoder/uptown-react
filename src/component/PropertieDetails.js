@@ -14,7 +14,7 @@ const PropertiesDetails = () => {
                     <span><img src={iconLocation} alt=""/></span>
                     <div>
                         <form className="flex" action="">
-                            <label className="font-semibold" for="location">Location</label>
+                            <label className="font-semibold" htmlFor="location">Location</label>
                             <select name="location" id="location"></select>
                         </form>
                         <p>Lekki, Lagos</p>
@@ -24,7 +24,7 @@ const PropertiesDetails = () => {
                     <span><img src={iconHouse} alt=""/></span>
                     <div>
                         <form className="flex" action="">
-                            <label className="font-semibold" for="house">Property type</label>
+                            <label className="font-semibold" htmlFor="house">Property type</label>
                             <select name="house" id="house"></select>
                         </form>
                         <p>Duplex</p>
@@ -34,7 +34,7 @@ const PropertiesDetails = () => {
                     <span><img src={iconTag} alt=""/></span>
                     <div>
                         <form className="flex" action="">
-                            <label className="font-semibold" for="amount">Maximum price</label>
+                            <label className="font-semibold" htmlFor="amount">Maximum price</label>
                             <select name="amount" id="amount"></select>
                         </form>
                         <p>#5,000,000</p>

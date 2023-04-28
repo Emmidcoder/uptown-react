@@ -8,7 +8,7 @@ const Subscription = () => {
                 <h2 className=" subscription__heading">Subscribe for News and Updates on our properties.</h2>
 
                 <div className="mt-4">
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <form className="subscription__form">
                         <input className="min-w-0" type="text" id="email" placeholder="Enter your email" />
                         <button className="btn-fill" type="submit">Subscribe</button>

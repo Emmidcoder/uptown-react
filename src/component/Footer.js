@@ -6,10 +6,10 @@ import instagramIcon from "../img/icon-instagram.svg"
 
 const Footer = () => {
     return (
-        <div class="footer">
+        <div className="footer">
             <div><img src={require('../img/logo-dark.png')} alt="logo"/></div>
 
-            <div class="medias">
+            <div className="medias">
                 <div>
                     <img src={facebookIcon} alt="facebook-icon"/>
                 </div>

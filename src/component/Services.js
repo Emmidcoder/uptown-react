@@ -3,7 +3,7 @@ import React from "react";
 
 const Services = () => {
     return (
-        <section class = "services">
+        <section className= "services">
             <div>
                 <img src={require('../img/house6.png')} alt="house" />
             </div>
