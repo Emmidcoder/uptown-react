@@ -36,7 +36,7 @@
 
 @layer components{
     .body {
-        @apply font-body bg-slate-50
+        @apply font-body text-lg bg-slate-50
     }
 
     .head {
@@ -44,7 +44,7 @@
     }
 
     .nav-bar{
-        @apply  pt-3 cos-container flex justify-between items-start gap-6
+        @apply  pt-3 cos-container flex justify-between items-start 
     }
 
     .logo {
@@ -94,24 +94,16 @@
     }
     
     .navigation {
-        @apply z-10 w-60 md:w-max pl-4 py-3 fixed top-20 right-0 md:top-0 md:right-0 text-start md:relative md:grow flex flex-col md:flex-row items-end md:items-stretch md:justify-between bg-secondary-200 md:bg-transparent translate-x-full duration-100
+        @apply z-10 w-60 md:w-max pl-4 py-3 fixed top-20 right-0 md:top-0 md:right-0 text-start md:relative md:grow flex flex-col md:flex-row items-end md:items-stretch md:justify-between rounded-tl-md rounded-bl-md bg-secondary-200 md:bg-transparent translate-x-full md:translate-x-0 duration-100
     }
-
+ 
     .navigation__items {
-        @apply md:w-80 font-medium flex flex-col md:flex-row md:justify-between gap-4  
+        @apply md:w-96 font-medium flex flex-col md:flex-row md:justify-between gap-y-6  
     }
 
     .toggle-navigation{
         @apply translate-x-0
     }
-
-    /* .navigation__items-small{
-        @apply w-52 h-60 pl-2 absolute top-20 right-0 flex flex-col justify-evenly translate-x-full bg-secondary-200 duration-100
-    }*/
-
-    /* .navigation__item{
-        @apply pl-2 py-1 hover:bg-secondary-100
-    }  */
 
     .log {
         @apply  flex gap-3 md:font-semibold

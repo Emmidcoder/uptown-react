@@ -52,8 +52,6 @@ const NavBar = () => {
                     </div>
                 </label>
             </div>
-            {/* <label htmlFor="checkbox" className="navigation__button">
-            </label> */}
         </div>
     )
 }
