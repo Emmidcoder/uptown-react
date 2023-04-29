@@ -22,9 +22,9 @@ const NavBar = () => {
                 <img className="w-36 " src={logo} alt="logo" />
             </div>
 
-            <div className="overlay"></div>
-            <nav className="navigation">
-                <div className="flex justify-between">
+            <div className={`overlay ${checked === true ? 'toggle-overlay' : '' }`} onClick={closeNavHandler} ></div>
+            <nav className={`navigation ${checked === true ? 'toggle-navigation' : '' }`}>
+                <div className="w-full flex flex-col md:flex-row md:justify-between gap-6">
                     <ul className="navigation__items">
                         <NavigationLink onCloseNavHandler={closeNavHandler} className="navigation__item font-bold" content="Home" />
                         <NavigationLink onCloseNavHandler={closeNavHandler} className="navigation__item" content="About us" />

@@ -13,6 +13,7 @@ const Footer = () => {
                 <div>
                     <img src={facebookIcon} alt="facebook-icon"/>
                 </div>
+
                 <div>
                     <img src={twiterIcon} alt="twiter-icon"/>
                 </div>

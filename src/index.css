@@ -4,6 +4,35 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .cos-container {
+        @apply px-4 sm:px-8 md:px-10 bscreen:px-14 lg:px-20
+    }
+
+    .btn-fill {
+        @apply px-2 md:px-6 py-1 md:py-2 bg-primary rounded-lg text-white text-center
+    }
+
+    .btn-round {
+        @apply w-6 h-6 sm:w-8 sm:h-8 flex justify-center items-center border-2 border-primary rounded-full
+    }
+
+    .btn-round-fill {
+        @apply w-6 h-6 sm:w-8 sm:h-8 flex justify-center items-center bg-primary rounded-full text-white
+    }
+
+    .heading2 {
+        @apply text-primary text-xl font-bold
+    }
+
+    .sub-heading2 {
+        @apply text-2xl sm:text-4xl font-semibold mt-3
+    }
+
+    .dot {
+        @apply w-3 h-3 bg-primary rounded-full
+    }
+}
 
 @layer components{
     .body {
@@ -15,7 +44,7 @@
     }
 
     .nav-bar{
-        @apply  pt-3 cos-container flex justify-between items-start
+        @apply  pt-3 cos-container flex justify-between items-start gap-6
     }
 
     .logo {
@@ -23,22 +52,25 @@
     }
    
     .overlay{
-        @apply h-screen w-0 fixed top-0 right-0 backdrop-blur-sm
+        @apply h-screen w-0 fixed top-0 right-0 backdrop-blur-sm duration-100
+    }
+
+    .toggle-overlay{
+        @apply w-screen
     }
 
     .nav__btn{
-        @apply z-10 mt-3 fixed h-7 w-10  md:hidden 
+        @apply z-10 mt-3 fixed right-4 h-7 w-10 md:hidden 
     }
 
     .checkbox{
         @apply hidden
     }
 
-
     .hand-burger__top,
     .hand-burger__center,
     .hand-burger__bottom{
-        @apply  w-8 h-1 absolute block bg-primary 
+        @apply  w-8 h-1 absolute block bg-primary duration-100
     }
     
     .hand-burger__top{
@@ -62,17 +94,15 @@
     }
     
     .navigation {
-        @apply z-10 fixed top-20 right-20 md:top-0 md:right-0 text-start bg-slate-600 md:relative md:grow flex flex-col md:flex-row items-end md:items-stretch md:justify-between
+        @apply z-10 w-60 md:w-max pl-4 py-3 fixed top-20 right-0 md:top-0 md:right-0 text-start md:relative md:grow flex flex-col md:flex-row items-end md:items-stretch md:justify-between bg-secondary-200 md:bg-transparent translate-x-full duration-100
     }
 
-    /* .navigation-small{
-        @apply z-10 h-screen w-0 fixed top-0 right-0 flex backdrop-blur-sm
-    } */
-
-    
-
     .navigation__items {
-        @apply   font-medium grow flex flex-col md:flex-row md:justify-between md:w-80
+        @apply md:w-80 font-medium flex flex-col md:flex-row md:justify-between gap-4  
+    }
+
+    .toggle-navigation{
+        @apply translate-x-0
     }
 
     /* .navigation__items-small{
@@ -84,7 +114,7 @@
     }  */
 
     .log {
-        @apply flex gap-3 md:font-semibold
+        @apply  flex gap-3 md:font-semibold
     }
 
     .btn-signin {
@@ -248,32 +278,3 @@
     }
 }
 
-@layer utilities{
-    .cos-container {
-        @apply px-4 sm:px-8 md:px-10 bscreen:px-14 lg:px-20
-    }
-
-    .btn-fill {
-        @apply px-2 md:px-6 py-1 md:py-2 bg-primary rounded-lg text-white text-center
-    }
-
-    .btn-round {
-        @apply w-6 h-6 sm:w-8 sm:h-8 flex justify-center items-center border-2 border-primary rounded-full
-    }
-
-    .btn-round-fill {
-        @apply w-6 h-6 sm:w-8 sm:h-8 flex justify-center items-center bg-primary rounded-full text-white
-    }
-
-    .heading2 {
-        @apply text-primary text-xl font-bold
-    }
-
-    .sub-heading2 {
-        @apply text-2xl sm:text-4xl font-semibold mt-3
-    }
-
-    .dot {
-        @apply w-3 h-3 bg-primary rounded-full
-    }
-}
