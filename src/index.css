@@ -36,7 +36,7 @@
 
 @layer components{
     .body {
-        @apply font-body text-lg bg-slate-50
+        @apply font-body bg-slate-50
     }
 
     .head {
@@ -162,7 +162,7 @@
     }
 
     .slide-btns {
-        @apply flex gap-3 self-end
+        @apply flex gap-3  self-end
     }
 
     .apartment-sect {
@@ -170,7 +170,7 @@
     }
 
     .apartments {
-        @apply mt-8 md:mt-16 flex justify-between gap-6 overflow-x-scroll overscroll-x-contain [&>*]:min-w-[16rem]
+        @apply mt-8 md:mt-16 flex justify-between gap-6 overflow-x-scroll md:overflow-x-hidden overscroll-x-contain [&>*]:min-w-[16rem]
     }
 
     .apartment__details {
@@ -194,7 +194,7 @@
     }
 
     .team-members__detail {
-        @apply mt-8 md:mt-16 flex justify-between gap-6 overflow-x-scroll overscroll-x-contain [&>*]:min-w-[16rem]
+        @apply mt-8 md:mt-16 flex justify-between gap-6 overflow-x-scroll overscroll-x-contain md:overflow-x-hidden [&>*]:min-w-[16rem]
     }
 
     .reviews {
@@ -226,7 +226,7 @@
     }
 
     .news__detail {
-        @apply mt-8 md:mt-16 flex justify-between gap-6 overflow-x-scroll overscroll-x-contain [&>*]:min-w-[16rem]
+        @apply mt-8 md:mt-16 flex justify-between gap-6 overflow-x-scroll md:overflow-x-hidden overscroll-x-contain [&>*]:min-w-[16rem]
     }
 
     .news__date {

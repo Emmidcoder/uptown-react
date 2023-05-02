@@ -1,12 +1,12 @@
 import React from "react";
 
 
-const SectionHeading = () => {
+const SectionHeading = (props) => {
     return (
         <div className="sect-heading">
             <div>
-                <h4 className="heading2">Listed Apartment</h4>
-                <h2 className="sub-heading2">Over 1000 homes</h2>
+                <h4 className="heading2">{props.heading}</h4>
+                <h2 className="sub-heading2">{props.subHeading}</h2>
             </div>
 
             <div className="slide-btns">

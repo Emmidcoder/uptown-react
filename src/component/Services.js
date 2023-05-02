@@ -1,11 +1,17 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 const Services = () => {
     return (
         <section className= "services">
-            <div>
-                <img src={require('../img/house6.png')} alt="house" />
+            <div className="">
+                <LazyLoadImage
+                    className="w-full"
+                    src={require('../img/house6.png')}
+                    placeholderSrc={require('../img/house6-small.png')}
+                    alt="house" />
             </div>
 
             <div className="max-w-md">

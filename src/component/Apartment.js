@@ -1,72 +1,28 @@
 import React from "react";
-import SectionHeading from "../utilities/SectionHeading";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
-const Apartment = () => {
+const Apartment = (props) => {
     return (
-        <section className="apartment-sect">
-            <SectionHeading/>
+        <div className="w-72">
+            <div className="w-full">
+                <LazyLoadImage
+                    className="w-full"
+                    src={props.img}
+                    placeholderSrc={props.lazyImg}
+                    alt="house" />
+            </div>
 
-            <div
-                className="apartments">
-                <div className=" ">
-                    <div>
-                        <img src={require('../img/house2.png')} alt="house"/>
-                    </div>
-
-                    <div className="apartment__details">
-                        <h5 className="font-bold">Lekki Ajah, Lagos</h5>
-                        <p>Bed: 4 | Bath: 5 | SqFt: 120</p>
-                        <div>
-                            <button>Book now</button>
-                            <p>5,500,000</p>
-                        </div>
-                    </div>
-                </div>
+            <div className="apartment__details">
+                <h5 className="font-bold">Lekki Ajah, Lagos</h5>
+                <p>Bed: 4 | Bath: 5 | SqFt: 120</p>
                 <div>
-                    <div>
-                        <img src={require('../img/house3.png')} alt="house"/>
-                    </div>
-
-                    <div className="apartment__details">
-                        <h5 className="font-bold">Lekki Ajah, Lagos</h5>
-                        <p>Bed: 4 | Bath: 5 | SqFt: 120</p>
-                        <div>
-                            <button>Book now</button>
-                            <p>12,500,000</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <img src={require('../img/house4.png')} alt="house"/>
-                    </div>
-
-                    <div className="apartment__details">
-                        <h5 className="font-bold">Lekki Ajah, Lagos</h5>
-                        <p>Bed: 4 | Bath: 5 | SqFt: 120</p>
-                        <div>
-                            <button>Book now</button>
-                            <p>4,500,000</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <img src={require('../img/house5.png')} alt="house"/>
-                    </div>
-
-                    <div className="apartment__details">
-                        <h5 className="font-bold">Lekki Ajah, Lagos</h5>
-                        <p>Bed: 4 | Bath: 5 | SqFt: 120</p>
-                        <div>
-                            <button>Book now</button>
-                            <p>6,000,000</p>
-                        </div>
-                    </div>
+                    <button>Book now</button>
+                    <p>props.price</p>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
 

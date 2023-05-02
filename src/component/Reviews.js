@@ -2,15 +2,23 @@ import React from "react";
 import iconLeft from "../img/icon-quote-left.svg"
 import iconRight from "../img/icon-quote-right.svg"
 import SectionHeading from "../utilities/SectionHeading";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Reviews = () => {
     return (
         <section className="reviews">
-           <SectionHeading/>
+            <SectionHeading heading="Clients Review" subHeading="What our clients say" />
 
             <div className="reviewer">
                 <div className="w-80">
-                    <img className="w-full" src={require('../img/reviewer.png')} alt="man" />
+                    <LazyLoadImage
+                        className="w-full"
+                        src={require('../img/reviewer.png')}
+                        placeholderSrc={require('../img/reviewer-small.png')}
+                        alt="man"
+                        effect="blur"/>
+                    
                     <h5 className="reviewer__name--small">Blacmeek Jaybee</h5>
                 </div>
 

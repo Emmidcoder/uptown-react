@@ -2,9 +2,9 @@ import React, {useEffect} from 'react';
 import Header from './component/Header';
 import PropertiesDetails from './component/PropertieDetails';
 import TrusteeCompanies from './component/TrusteeCompanies';
-import Apartment from './component/Apartment';
+import Apartments from './component/Apartments';
 import Services from './component/Services';
-import TeamMembers from './component/TeamMember';
+import TeamMembers from './component/TeamMembers';
 import Reviews from './component/Reviews';
 import News from './component/News';
 import Subscription from './component/Subscription';
@@ -24,7 +24,7 @@ function App() {
       
       <TrusteeCompanies />
       
-      <Apartment />
+      <Apartments />
       
       <Services />
       

@@ -1,4 +1,5 @@
 import React from "react";
+import NewsItem from "./NewsItem";
 
 
 const News = () => {
@@ -18,65 +19,10 @@ const News = () => {
             </div>
 
             <div className="news__detail">
-                <div>
-                    <div><img src={require('../img/news1.png')} alt="news"/></div>
-                    <p className="news__date"><span className="dot">&nbsp;</span> 31 Jan, 2023
-                    </p>
-                    <h5 className="news__headline">Asuu: Higher Instition strikes continues</h5>
-
-                    <div className="news__views">
-                        <span className="news__views--icon">
-                            <img className="inline" src={require('../img/icon-eye.svg')} alt="eye-icon"/>
-                                <p className="inline">546</p>
-                        </span>
-                        <button className="news__views--btn">Read more</button>
-                    </div>
-                </div>
-
-                <div>
-                    <div><img src={require('../img/news2.png')} alt="news"/></div>
-                    <p className="news__date"><span className="dot">&nbsp;</span> 31 Jan, 2023
-                    </p>
-                    <h5 className="news__headline">Asuu: Higher Instition strikes continues</h5>
-
-                    <div className="news__views">
-                        <span className="news__views--icon">
-                            <img className="inline" src={require('../img/icon-eye.svg')} alt="eye-icon"/>
-                                <p className="inline">546</p>
-                        </span>
-                        <button className="news__views--btn">Read more</button>
-                    </div>
-                </div>
-
-                <div>
-                    <div><img src={require('../img/news3.png')} alt="news"/></div>
-                    <p className="news__date"><span className="dot">&nbsp;</span> 31 Jan, 2023
-                    </p>
-                    <h5 className="news__headline">Asuu: Higher Instition strikes continues</h5>
-
-                    <div className="news__views">
-                        <span className="news__views--icon">
-                            <img className="inline" src={require('../img/icon-eye.svg')} alt="eye-icon"/>
-                                <p className="inline">546</p>
-                        </span>
-                        <button className="news__views--btn">Read more</button>
-                    </div>
-                </div>
-
-                <div>
-                    <div><img src={require('../img/news4.png')} alt="news"/></div>
-                    <p className="news__date"><span className="dot">&nbsp;</span> 31 Jan, 2023
-                    </p>
-                    <h5 className="news__headline">Asuu: Higher Instition strikes continues</h5>
-
-                    <div className="news__views">
-                        <span className="news__views--icon">
-                            <img className="inline" src={require('../img/icon-eye.svg')} alt="eye-icon"/>
-                                <p className="inline">546</p>
-                        </span>
-                        <button className="news__views--btn">Read more</button>
-                    </div>
-                </div>
+                <NewsItem img={require('../img/news1.png')} lazyImg={require('../img/news1-small.png')} />
+                <NewsItem img={ require('../img/news2.png')} lazyImg={require('../img/news2-small.png')} />
+                <NewsItem img={require('../img/news3.png')} lazyImg={require('../img/news3-small.png')} />
+                <NewsItem img={require('../img/news4.png')} lazyImg={require('../img/news4-small.png')}/>    
             </div>
         </section>
     )

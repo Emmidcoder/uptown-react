@@ -1,4 +1,6 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 const HeroSection = () => {
@@ -13,12 +15,15 @@ const HeroSection = () => {
                 <button className="get-btn">Get started</button>
             </div>
 
-            <div className="self-end">
-                <img className="h-full" src={require('../img/house.png')} alt="House" />
+            <div className="self-end w-full">
+                <LazyLoadImage className="w-full" src={require('../img/house.png')}
+                    placeholderSrc={require('../img/house-small.png')}
+                    alt="House"
+                    effect="blur"
+                />
             </div>
         </section>
     )
-
 }
 
 export default HeroSection;

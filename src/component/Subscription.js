@@ -1,4 +1,6 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 const Subscription = () => {
@@ -17,7 +19,13 @@ const Subscription = () => {
             </div>
 
             <div className="max-w-lg self-end">
-                <img className="h-full " src={require('../img/house.png')} alt="house" />
+                <LazyLoadImage
+                    className="h-full"
+                    src={require('../img/house.png')}
+                    placeholderSrc={require('../img/house-small.png')}
+                    alt="house"
+                    effect="blur"
+                />
             </div>
         </section>
     )
