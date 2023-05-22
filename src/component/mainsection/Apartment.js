@@ -11,7 +11,9 @@ const Apartment = (props) => {
                     className="w-full"
                     src={props.img}
                     placeholderSrc={props.lazyImg}
-                    alt="house" />
+                    alt="house"
+                    effect="blur"
+                />
             </div>
 
             <div className="apartment__details">

@@ -1,7 +1,7 @@
 import React from "react";
-import iconLocation from "../img/icon-location.svg";
-import iconHouse from "../img/icon-house.svg";
-import iconTag from "../img/icon-tag.svg";
+import iconLocation from "../../img/icon-location.svg";
+import iconHouse from "../../img/icon-house.svg";
+import iconTag from "../../img/icon-tag.svg";
 
 const PropertiesDetails = () => {
     return (

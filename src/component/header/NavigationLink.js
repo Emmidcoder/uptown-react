@@ -3,8 +3,8 @@ import React from "react";
 
 const NavigationLink = (props) => {
     return (
-        <li className={props.className}>
-            <a onClick={props.onCloseNavHandler} href="/">{props.content}</a>
+        <li className={props.className} onClick={props.onCloseNavHandler} >
+            <a href="/">{props.content}</a>
         </li>
     )
 }

@@ -52,45 +52,11 @@
     }
    
     .overlay{
-        @apply h-screen w-0 fixed top-0 right-0 backdrop-blur-sm duration-100
+        @apply z-10 h-screen w-0 fixed top-0 right-0 backdrop-blur-sm duration-100
     }
 
     .toggle-overlay{
         @apply w-screen
-    }
-
-    .nav__btn{
-        @apply z-10 mt-3 fixed right-4 h-7 w-10 md:hidden 
-    }
-
-    .checkbox{
-        @apply hidden
-    }
-
-    .hand-burger__top,
-    .hand-burger__center,
-    .hand-burger__bottom{
-        @apply  w-8 h-1 absolute block bg-primary duration-100
-    }
-    
-    .hand-burger__top{
-        @apply -top-2
-    }
-
-    .hand-burger__bottom{
-        @apply top-2
-    }
-
-    .cross-center{
-        @apply bg-transparent
-    }
-
-    .cross-top{
-        @apply top-0 rotate-[135deg]
-    }
-
-    .cross-bottom{
-        @apply top-0 -rotate-[135deg]
     }
     
     .navigation {
@@ -99,6 +65,44 @@
  
     .navigation__items {
         @apply md:w-96 font-medium flex flex-col md:flex-row md:justify-between gap-y-6  
+    }
+
+    .navigation__items {
+        @apply  hover:bg-secondary-100
+    }
+
+    .nav__btn {
+        @apply z-10 mt-3 fixed right-4 h-7 w-10 md:hidden
+    }
+
+    .checkbox {
+        @apply hidden
+    }
+
+    .hand-burger__top,
+    .hand-burger__center,
+    .hand-burger__bottom {
+        @apply w-8 h-1 absolute block bg-primary duration-100
+    }
+
+    .hand-burger__top {
+        @apply -top-2
+    }
+
+    .hand-burger__bottom {
+        @apply top-2
+    }
+
+    .cross-center {
+        @apply bg-transparent
+    }
+
+    .cross-top {
+        @apply top-0 rotate-[135deg]
+    }
+
+    .cross-bottom {
+        @apply top-0 -rotate-[135deg]
     }
 
     .toggle-navigation{

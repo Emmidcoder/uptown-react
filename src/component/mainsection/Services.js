@@ -9,8 +9,8 @@ const Services = () => {
             <div className="">
                 <LazyLoadImage
                     className="w-full"
-                    src={require('../img/house6.png')}
-                    placeholderSrc={require('../img/house6-small.png')}
+                    src={require('../../img/house6.png')}
+                    placeholderSrc={require('../../img/house6-small.png')}
                     alt="house" />
             </div>
 

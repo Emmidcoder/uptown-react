@@ -1,5 +1,5 @@
 import React from "react";
-import eyeIcon from "../img/icon-eye.svg"
+import eyeIcon from "../../img/icon-eye.svg"
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 

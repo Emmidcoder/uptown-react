@@ -1,42 +1,29 @@
-import React, {useEffect} from 'react';
-import Header from './component/Header';
-import PropertiesDetails from './component/PropertieDetails';
-import TrusteeCompanies from './component/TrusteeCompanies';
-import Apartments from './component/Apartments';
-import Services from './component/Services';
-import TeamMembers from './component/TeamMembers';
-import Reviews from './component/Reviews';
-import News from './component/News';
-import Subscription from './component/Subscription';
-import Footer from './component/Footer';
+import React, { useEffect, useState} from 'react';
+import Header from './component/header/Header';
+import MainSections from './component/mainsection/MainSections';
+import SignInForm from './component/SignInForm';
 
 function App() {
   useEffect(() => {
     document.body.classList.add('body')
-  },[])
+  }, [])
+
+  const [signingIn, setSigningIn] = useState(false)
+  
+  const openSignInHandler = () => {
+    setSigningIn(true)
+  }
+
 
 
   return (
     <React.Fragment>
-      <Header />
+      <Header signIn={signingIn} onOpenSign={openSignInHandler} />
 
-      <PropertiesDetails />
-      
-      <TrusteeCompanies />
-      
-      <Apartments />
-      
-      <Services />
-      
-      <TeamMembers />
-      
-      <Reviews />
-      
-      <News />
+      {!signingIn && <MainSections />} 
 
-      <Subscription />
+      {signingIn && <SignInForm />}
       
-      <Footer/>
     </React.Fragment>
   );
 }

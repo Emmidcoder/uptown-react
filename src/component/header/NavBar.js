@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
-import logo from "../img/icon-logo.svg"
+import logo from "../../img/icon-logo.svg"
 import NavigationLink from "./NavigationLink";
 
-const NavBar = () => {
+const NavBar = (props) => {
     const [checked, setChecked] = useState(null)
     const checkbox = useRef()
 
@@ -22,7 +22,10 @@ const NavBar = () => {
                 <img className="w-36 " src={logo} alt="logo" />
             </div>
 
+            {/* small screens overlay */}
             <div className={`overlay ${checked === true ? 'toggle-overlay' : '' }`} onClick={closeNavHandler} ></div>
+            {/* small screens overlay */}
+            
             <nav className={`navigation ${checked === true ? 'toggle-navigation' : '' }`}>
                 <div className="w-full flex flex-col md:flex-row md:justify-between gap-6">
                     <ul className="navigation__items">
@@ -33,12 +36,13 @@ const NavBar = () => {
                     </ul>
 
                     <div className="log">
-                        <button className="btn-signin">Sign in</button>
+                        <button onClick={props.openSignInForm} className="btn-signin">Sign in</button>
                         <button className="btn-fill">Sign up</button>
                     </div>
                 </div>
             </nav>
 
+            {/* small screens handbugge */}
             <div>
                 <input ref={checkbox} className="checkbox" defaultChecked={checked} onChange={toggleNavHandler} type="checkbox" id="checkbox" />
 

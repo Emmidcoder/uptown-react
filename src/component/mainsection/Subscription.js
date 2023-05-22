@@ -21,8 +21,8 @@ const Subscription = () => {
             <div className="max-w-lg self-end">
                 <LazyLoadImage
                     className="h-full"
-                    src={require('../img/house.png')}
-                    placeholderSrc={require('../img/house-small.png')}
+                    src={require('../../img/house.png')}
+                    placeholderSrc={require('../../img/house-small.png')}
                     alt="house"
                     effect="blur"
                 />

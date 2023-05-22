@@ -16,8 +16,10 @@ const HeroSection = () => {
             </div>
 
             <div className="self-end w-full">
-                <LazyLoadImage className="w-full" src={require('../img/house.png')}
-                    placeholderSrc={require('../img/house-small.png')}
+                <LazyLoadImage
+                    className="w-full"
+                    src={require('../../img/house.png')}
+                    placeholderSrc={require('../../img/house-small.png')}
                     alt="House"
                     effect="blur"
                 />
