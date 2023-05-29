@@ -36,7 +36,7 @@ const NavBar = (props) => {
                     </ul>
 
                     <div className="log">
-                        <button onClick={props.openSignInForm} className="btn-signin">Sign in</button>
+                        <button onClick={props.onOpenSignInForm} className="btn-signin">Sign in</button>
                         <button className="btn-fill">Sign up</button>
                     </div>
                 </div>

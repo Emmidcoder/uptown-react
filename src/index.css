@@ -36,15 +36,15 @@
 
 @layer components{
     .body {
-        @apply font-body bg-slate-50
+        @apply relative font-body bg-slate-50
     }
 
-    .head {
-        @apply  min-h-[95vh] flex flex-col justify-between bg-secondary-100 relative 
+    .header {
+        @apply min-h-[95vh] flex flex-col justify-end bg-secondary-100 relative 
     }
 
     .nav-bar{
-        @apply  pt-3 cos-container flex justify-between items-start 
+        @apply w-full z-20 absolute pt-3 cos-container flex justify-between items-start 
     }
 
     .logo {
@@ -56,7 +56,7 @@
     }
 
     .toggle-overlay{
-        @apply w-screen
+        @apply w-screen 
     }
     
     .navigation {
@@ -117,15 +117,15 @@
         @apply px-2 md:px-6 py-1 md:py-2 border-2 border-primary rounded-lg
     }
 
-    .header {
+    .hero {
         @apply pl-0.5 sm:pl-8 md:pl-10 bscreen:pl-14 lg:pl-20 flex flex-col md:flex-row md:justify-between md:items-center
     }
 
-    .heading1-sect {
+    .hero__heading{
         @apply max-w-xl md:py-10 px-4 sm:px-0 text-center sm:text-start
     }
 
-    .heading1 {
+    .hero__heading--1 {
         @apply  mt-20 md:mt-0 text-5xl sm:text-6xl md:text-7xl font-semibold md:leading-[5rem]
     }
 
