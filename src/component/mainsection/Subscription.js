@@ -12,7 +12,7 @@ const Subscription = () => {
                 <div className="mt-4">
                     <label htmlFor="email">Email</label>
                     <form className="subscription__form">
-                        <input className="min-w-0" type="text" id="email" placeholder="Enter your email" />
+                        <input className="min-w-0 outline-none" type="text" id="email" placeholder="Enter your email" />
                         <button className="btn-fill" type="submit">Subscribe</button>
                     </form>
                 </div>

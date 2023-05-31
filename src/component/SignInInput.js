@@ -3,12 +3,11 @@ import React from "react";
 
 const SignInInput = (props) => {
     return (
-        <div>
-            <label htmlFor={props.html}>{props.name}</label>
-            <input
-                type={props.type}
-                id={props.id}>
-            </input>
+        <div className="p-3 flex items-center border-[1px] border-secondary-200 rounded-md">
+            <label htmlFor={props.htmlFor}>
+                <img src={props.src} alt={props.alt} />
+            </label>
+            <input className="w-full outline-none" type={props.type} id={props.id} placeholder={props.placeholder} />
         </div>
     )
 }

@@ -11,9 +11,14 @@ const NavBar = (props) => {
     }
 
     const closeNavHandler = (e) => {
-        e.preventDefault()
+        e?.preventDefault()
         checkbox.current.checked = false
         setChecked(checkbox.current.checked)
+    }
+
+    const openFormAndCloseNav = () =>{
+        props.onOpenSignInForm()
+        closeNavHandler()
     }
 
     return (
@@ -36,7 +41,7 @@ const NavBar = (props) => {
                     </ul>
 
                     <div className="log">
-                        <button onClick={props.onOpenSignInForm} className="btn-signin">Sign in</button>
+                        <button onClick={openFormAndCloseNav} className="btn-signin">Sign in</button>
                         <button className="btn-fill">Sign up</button>
                     </div>
                 </div>

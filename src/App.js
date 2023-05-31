@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './component/header/Header';
 import MainSections from './component/mainsection/MainSections';
 import SignInForm from './component/SignInForm';
@@ -10,11 +10,11 @@ function App() {
   }, [])
 
   const [signingIn, setSigningIn] = useState(false)
-  
+
   const [home, setHome] = useState(false)
 
 
-  
+
   const openSignInHandler = () => {
     setSigningIn(true)
   }
@@ -25,15 +25,14 @@ function App() {
 
   return (
     <React.Fragment>
-      
-      <NavBar onOpenSignInForm={openSignInHandler} onOpenHomeHandler={openHomeHandler} home={home} />
-      
-      {!signingIn && <Header/>}
 
-      {!signingIn && <MainSections />} 
+      {!signingIn && <NavBar onOpenSignInForm={openSignInHandler} onOpenHomeHandler={openHomeHandler} home={home} />}
+      {!signingIn && <Header />}
+
+      {!signingIn && <MainSections />}
 
       {signingIn && <SignInForm />}
-      
+
     </React.Fragment>
   );
 }
