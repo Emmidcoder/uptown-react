@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Header from './component/header/Header';
 import MainSections from './component/mainsection/MainSections';
-import SignInForm from './component/SignInForm';
+import SignIn from './component/signing/SignIn';
 import NavBar from './component/header/NavBar';
 
 function App() {
@@ -10,14 +10,17 @@ function App() {
   }, [])
 
   const [signingIn, setSigningIn] = useState(false)
+  // const [signingUp, setSigningUp] = useState(false)
 
   const [home, setHome] = useState(false)
-
-
 
   const openSignInHandler = () => {
     setSigningIn(true)
   }
+
+  // const openSignUpHandler = () => {
+  //   setSigningIn(true)
+  // }
 
   const openHomeHandler = () => {
     setHome(true)
@@ -31,7 +34,7 @@ function App() {
 
       {!signingIn && <MainSections />}
 
-      {signingIn && <SignInForm />}
+      {signingIn && <SignIn />}
 
     </React.Fragment>
   );

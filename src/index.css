@@ -272,11 +272,15 @@
     /* signingIn*/
 
     .signin{
-        @apply w-screen h-screen bg-secondary-100
+        @apply relative w-screen h-screen bg-secondary-100
     }
 
     .signin__form{
-        @apply absolute top-0 left-[50%] h-full w-[50vw] p-20 bg-white flex flex-col gap-4 [&>*]:flex [&>*]:gap-2
+        @apply max-w-[50vw] px-20 py-3 bg-white
+    }
+
+    .signin__form--content{
+        @apply mt-10 flex flex-col gap-4 [&>*]:flex [&>*]:gap-2
     }
 }
 
