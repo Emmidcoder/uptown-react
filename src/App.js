@@ -9,32 +9,44 @@ function App() {
     document.body.classList.add('body')
   }, [])
 
+  const [signing, setSigning] = useState(false)
   const [signingIn, setSigningIn] = useState(false)
-  // const [signingUp, setSigningUp] = useState(false)
-
-  const [home, setHome] = useState(false)
+  const [signingUp, setSigningUp] = useState(false)
 
   const openSignInHandler = () => {
+    setSigning(true)
     setSigningIn(true)
   }
 
-  // const openSignUpHandler = () => {
-  //   setSigningIn(true)
-  // }
+  const openSignUpHandler = () => {
+    setSigning(true)
+    setSigningUp(true)
+  }
 
-  const openHomeHandler = () => {
-    setHome(true)
+  const closeSigningHandler = () => {
+    setSigning(false)
+    setSigningIn(false)
+    setSigningUp(false)
   }
 
   return (
     <React.Fragment>
 
-      {!signingIn && <NavBar onOpenSignInForm={openSignInHandler} onOpenHomeHandler={openHomeHandler} home={home} />}
-      {!signingIn && <Header />}
+      {!signing && <NavBar
+        onOpenSignInForm={openSignInHandler}
+        onOpenSignUpForm={openSignUpHandler}
+      />}
 
-      {!signingIn && <MainSections />}
+      {!signing && <Header />}
 
-      {signingIn && <SignIn />}
+      {!signing && <MainSections />}
+
+      {signing && <SignIn
+        signingIn={signingIn}
+        signingUp={signingUp}
+
+        onCloseSigningHandler={closeSigningHandler}
+      />}
 
     </React.Fragment>
   );

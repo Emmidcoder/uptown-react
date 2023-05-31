@@ -14,12 +14,14 @@ import SigningNetwork from "./SigningNetwork";
 
 
 
-const SignIn = () => {
+const SignIn = (props) => {
+   
     return (
         <div className="signin">
 
             <div className="w-full h-full">
                 <img
+                    
                     className="w-full h-full block object-fill"
                     src={require('../../img/Signing-bg-img.png')}
                     placeholdersrc={require('../../img/Signing-bg-img-small.png')}
@@ -29,8 +31,8 @@ const SignIn = () => {
             </div>
 
             <div className="absolute top-0 left-0 z-20 w-full h-full grid grid-cols-2 grid-rows-1">
-                <div className="justify-self-center self-center">
-                    <img src={logo} alt='logo' />
+                <div className="justify-self-center self-center" >
+                    <img src={logo} alt='logo' onClick={props.onCloseSigningHandler}/>
                 </div>
 
                 <div className="signin__form">
@@ -55,10 +57,20 @@ const SignIn = () => {
                             src={passwordIcon}
                         />
 
-                        <button className="p-3 text-white bg-primary flex justify-center rounded-md" type="submit">Sign in</button>
+                        {props.signingUp && <SignInInput
+                            htmlFor="password"
+                            type="password"
+                            id="password"
+                            name="Password"
+                            placeholder="Enter your password"
+                            src={passwordIcon}
+                        />}
+
+                        {props.signingIn && <button className="p-2 text-white bg-primary flex justify-center rounded-md" type="submit">Sign in</button>}
+                        {props.signingUp && <button className="p-2 text-white bg-primary flex justify-center rounded-md" type="submit">Sign up</button>}
                     </form>
 
-                    <div className="mt-10 flex justify-center items-center gap-x-7 text-[#A6A6A6;] text-xl">
+                    <div className="mt-8 flex justify-center items-center gap-x-7 text-[#A6A6A6;] text-xl">
                         <div>
                             <img src={lineIcon} alt="line-icon" />
                         </div>
@@ -70,13 +82,14 @@ const SignIn = () => {
                         </div>
                     </div>
 
-                    <div className="mt-10 flex flex-col gap-y-3">
+                    <div className="mt-8 flex flex-col gap-y-3">
                         <SigningNetwork src={googleLogo} alt="google icon" text="Sign in Google" />
                         <SigningNetwork src={appleLogo} alt="apple icon" text="Sign in Facebook" />
                         <SigningNetwork src={facebookLogo} alt="facebook icon" text="Sign in Apple" />
                     </div>
 
-                    <div className=" mt-5 text-center text-lg font-semibold">Don't have an account? <span className="text-primary">Sign up</span></div>
+                    {props.signingIn && <div className=" mt-8 text-center text-lg font-semibold">Don't have an account? <span className="text-primary">Sign in</span></div>}
+                    {props.signingUp && <div className=" mt-8 text-center text-lg font-semibold">Already have an account? <span className="text-primary">Sign up</span></div>}
                 </div>
             </div>
         </div>

@@ -21,6 +21,13 @@ const NavBar = (props) => {
         closeNavHandler()
     }
 
+    // const openFormAndCloseNav = () =>{
+    //     props.onOpenSignUpForm()
+    //     closeNavHandler()
+    // }
+
+
+
     return (
         <div className="nav-bar">
             <div className="logo">
@@ -42,7 +49,7 @@ const NavBar = (props) => {
 
                     <div className="log">
                         <button onClick={openFormAndCloseNav} className="btn-signin">Sign in</button>
-                        <button className="btn-fill">Sign up</button>
+                        <button onClick={props.onOpenSignUpForm} className="btn-fill">Sign up</button>
                     </div>
                 </div>
             </nav>
