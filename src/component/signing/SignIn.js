@@ -15,6 +15,16 @@ import SigningNetwork from "./SigningNetwork";
 
 
 const SignIn = (props) => {
+    const emailChangeHandler = (inputEmail) => {
+        const enteredEmail = inputEmail
+    }
+    const passwordChangeHandler = (inputPassword) => {
+        const enteredPassword = inputPassword
+    }
+
+    const submitHandler = () =>{
+        const 
+    }
    
     return (
         <div className="signing">
@@ -34,12 +44,13 @@ const SignIn = (props) => {
                             name="Email"
                             placeholder="Enter your email"
                             src={emailIcon}
+                            onEmailChangeHandler={emailChangeHandler}
                         />
 
                         <SignInInput
                             htmlFor="password"
                             type="password"
-                            id="password"
+                            id="password1"
                             name="Password"
                             placeholder="Enter your password"
                             src={passwordIcon}
@@ -48,7 +59,7 @@ const SignIn = (props) => {
                         {props.signingUp && <SignInInput
                             htmlFor="password"
                             type="password"
-                            id="password"
+                            id="password2"
                             name="Password"
                             placeholder="Enter your password"
                             src={passwordIcon}
