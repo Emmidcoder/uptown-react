@@ -48,9 +48,9 @@ const SignIn = (props) => {
                     </div>
 
                     <div className="signing__option">
-                        {props.signingIn && <span>Don't have an account?</span>}
-                        {props.signingUp && <span>Already have an account?</span>}
-                        <span className="text-primary">Sign up</span>
+                        {props.signingIn && <span>Don't have an account? <span className="text-primary">Sign up</span></span>}
+                        {props.signingUp && <span>Already have an account?<span className="text-primary">Sign in</span></span>}
+                        
                     </div>
                 </div>
             </div>

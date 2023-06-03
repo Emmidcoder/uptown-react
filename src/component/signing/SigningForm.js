@@ -65,8 +65,8 @@ const SigningForm = (props) => {
             </div>}
 
             <button className="signing__btn" type="submit">
-                {props.signingUp && <span>Sign in</span>}
-                {props.signingIn && <span>Sign up</span>}
+                {props.signingUp && <span>Sign up</span>}
+                {props.signingIn && <span>Sign in</span>}
             </button>
         </form>
     )
