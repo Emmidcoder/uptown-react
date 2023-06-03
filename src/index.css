@@ -293,6 +293,10 @@
         @apply mt-10 flex flex-col gap-4 [&>*]:flex [&>*]:gap-2
     }
 
+    .signin__form__input{
+        @apply p-2 flex items-center border-[1px] border-secondary-200 rounded-md
+    }
+
     .signing__btn{
         @apply p-2 text-white bg-primary flex justify-center rounded-md
     }

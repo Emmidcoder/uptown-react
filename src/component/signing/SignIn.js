@@ -1,31 +1,20 @@
 import React from "react";
-import SignInInput from "./SignInInput";
 import logo from "../../img/logo-signing.svg"
-import emailIcon from "../../img/icon-email.svg"
+
 import googleLogo from "../../img/logos_google-icon.svg"
 import facebookLogo from "../../img/logos_facebook.svg"
 import appleLogo from "../../img/ic_baseline-apple.svg"
-import passwordIcon from "../../img/icon-password.svg"
 
 import lineIcon from "../../img/icon-Line.svg"
 
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import SigningNetwork from "./SigningNetwork";
+import SigningForm from "./SigningForm";
 
 
 
 const SignIn = (props) => {
-    const emailChangeHandler = (inputEmail) => {
-        const enteredEmail = inputEmail
-    }
-    const passwordChangeHandler = (inputPassword) => {
-        const enteredPassword = inputPassword
-    }
-
-    const submitHandler = () =>{
-        const 
-    }
-   
+    
     return (
         <div className="signing">
             <div className="signing__content">
@@ -35,41 +24,8 @@ const SignIn = (props) => {
 
                 <div className="signing__form">
                     <h2 className="sub-heading2">Welcome</h2>
-                    <form className="signin__form--content">
 
-                        <SignInInput
-                            htmlFor="email"
-                            type="email"
-                            id="email"
-                            name="Email"
-                            placeholder="Enter your email"
-                            src={emailIcon}
-                            onEmailChangeHandler={emailChangeHandler}
-                        />
-
-                        <SignInInput
-                            htmlFor="password"
-                            type="password"
-                            id="password1"
-                            name="Password"
-                            placeholder="Enter your password"
-                            src={passwordIcon}
-                        />
-
-                        {props.signingUp && <SignInInput
-                            htmlFor="password"
-                            type="password"
-                            id="password2"
-                            name="Password"
-                            placeholder="Enter your password"
-                            src={passwordIcon}
-                        />}
-
-                        <button className="signing__btn" type="submit">
-                            {props.signingUp && <span>Sign in</span>}
-                            {props.signingIn && <span>Sign up</span>}
-                        </button>
-                    </form>
+                    <SigningForm signingUp={props.signingUp} signingIn={props.signingIn} />
 
                     <div className="signing__or">
                         <div>
