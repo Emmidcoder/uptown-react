@@ -14,7 +14,9 @@ import SigningForm from "./SigningForm";
 
 
 const SignIn = (props) => {
-    
+    const signIn = (email, password) => {
+        props.onSignIn(email, password)
+    }
     return (
         <div className="signing">
             <div className="signing__content">
@@ -25,7 +27,7 @@ const SignIn = (props) => {
                 <div className="signing__form">
                     <h2 className="sub-heading2">Welcome</h2>
 
-                    <SigningForm signingUp={props.signingUp} signingIn={props.signingIn} />
+                    <SigningForm signingUp={props.signingUp} signingIn={props.signingIn} onSignIn={signIn} />
 
                     <div className="signing__or">
                         <div>

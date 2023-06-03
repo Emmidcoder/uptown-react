@@ -19,7 +19,8 @@ const SigningForm = (props) => {
         console.log("hi");
     }
 
-    const submitHandler = () =>{
+    const submitHandler = (e) => {
+        e.preventDefault()
         props.onSignIn(enteredEmail, enteredPassword)
     }
 

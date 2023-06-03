@@ -29,6 +29,10 @@ function App() {
     setSigningUp(false)
   }
 
+  const login = (email, password) => {
+    closeSigningHandler()
+  }
+
   return (
     <React.Fragment>
 
@@ -46,6 +50,7 @@ function App() {
         signingUp={signingUp}
 
         onCloseSigningHandler={closeSigningHandler}
+        onSignIn={login}
       />}
 
     </React.Fragment>
