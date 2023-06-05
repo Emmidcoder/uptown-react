@@ -282,7 +282,7 @@
     }
 
     .signing__logo{
-        @apply justify-self-center self-center cursor-pointer
+        @apply justify-self-center self-center
     }
 
     .signing__form{

@@ -17,11 +17,12 @@ const SignIn = (props) => {
     const signIn = (email, password) => {
         props.onSignIn(email, password)
     }
+    
     return (
         <div className="signing">
             <div className="signing__content">
                 <div className="signing__logo" >
-                    <img src={logo} alt='logo' onClick={props.onCloseSigningHandler}/>
+                    <img src={logo} alt='logo' />
                 </div>
 
                 <div className="signing__form">
@@ -48,8 +49,8 @@ const SignIn = (props) => {
                     </div>
 
                     <div className="signing__option">
-                        {props.signingIn && <span>Don't have an account? <span className="text-primary">Sign up</span></span>}
-                        {props.signingUp && <span>Already have an account?<span className="text-primary">Sign in</span></span>}
+                        {props.signingIn && <span>Don't have an account? <span className="text-primary cursor-pointer" onClick={props.onOpenSignUpForm}>Sign up</span></span>}
+                        {props.signingUp && <span>Already have an account?<span className="text-primary cursor-pointer" onClick={props.onOpenSignInForm}>Sign in</span></span>}
                         
                     </div>
                 </div>
