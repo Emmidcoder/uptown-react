@@ -3,7 +3,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
-const Apartment = (props) => {
+const Property = (props) => {
     return (
         <div className="w-72">
             <div className="w-full">
@@ -16,7 +16,7 @@ const Apartment = (props) => {
                 />
             </div>
 
-            <div className="apartment__details">
+            <div className="property__details">
                 <h5 className="font-bold">Lekki Ajah, Lagos</h5>
                 <p>Bed: 4 | Bath: 5 | SqFt: 120</p>
                 <div>
@@ -28,4 +28,4 @@ const Apartment = (props) => {
     )
 }
 
-export default Apartment;
+export default Property;

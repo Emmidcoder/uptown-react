@@ -1,7 +1,7 @@
 import React from "react";
-import PropertiesDetails from './PropertieDetails';
+import PropertiesDetails from './Cathegories';
 import TrusteeCompanies from './TrusteeCompanies';
-import Apartments from './Apartments';
+import Properties from './Properties';
 import Services from './Services';
 import TeamMembers from './TeamMembers';
 import Reviews from './Reviews';
@@ -16,7 +16,7 @@ const MainSections = () => {
 
             <TrusteeCompanies />
 
-            <Apartments />
+            <Properties />
 
             <Services />
 

@@ -5,10 +5,10 @@ import iconTag from "../../img/icon-tag.svg";
 
 const PropertiesDetails = () => {
     return (
-        <div className="properties-detail">            
-            <h4 className="properties-detail__heading">Check available properties</h4>
+        <div className="cathegories-detail">            
+            <h4 className="cathegories-detail__heading">Check available properties</h4>
 
-            <div className="properties-detail__items">
+            <div className="cathegories-detail__items">
                 
                 <div>
                     <span><img src={iconLocation} alt=""/></span>
@@ -41,7 +41,7 @@ const PropertiesDetails = () => {
                     </div>
                 </div>
 
-                <button className="properties-detail__btn--search">Search</button>
+                <button className="cathegories-detail__btn--search">Search</button>
             </div>
         </div>
     )
