@@ -7,16 +7,16 @@ import TeamMembers from './TeamMembers';
 import Reviews from './Reviews';
 import News from './News';
 import Subscription from './Subscription';
-import Footer from '../Footer';
+import Footer from '../../Footer';
 
-const MainSections = () => {
+const MainSections = (props) => {
     return (
         <main>
             <PropertiesDetails />
 
             <TrusteeCompanies />
 
-            <Properties />
+            <Properties pageOpen={props.pageOpen} />
 
             <Services />
 

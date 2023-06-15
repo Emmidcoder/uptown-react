@@ -19,10 +19,10 @@ const News = () => {
             </div>
 
             <div className="news__detail">
-                <NewsItem img={require('../../img/news1.png')} lazyImg={require('../../img/news1-small.png')} />
-                <NewsItem img={ require('../../img/news2.png')} lazyImg={require('../../img/news2-small.png')} />
-                <NewsItem img={require('../../img/news3.png')} lazyImg={require('../../img/news3-small.png')} />
-                <NewsItem img={require('../../img/news4.png')} lazyImg={require('../../img/news4-small.png')}/>    
+                <NewsItem img={require('../../../img/news1.png')} lazyImg={require('../../../img/news1-small.png')} />
+                <NewsItem img={ require('../../../img/news2.png')} lazyImg={require('../../../img/news2-small.png')} />
+                <NewsItem img={require('../../../img/news3.png')} lazyImg={require('../../../img/news3-small.png')} />
+                <NewsItem img={require('../../../img/news4.png')} lazyImg={require('../../../img/news4-small.png')}/>    
             </div>
         </section>
     )

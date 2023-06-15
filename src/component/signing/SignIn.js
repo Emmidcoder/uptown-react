@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import logo from "../../img/logo-signing.svg"
 
 import googleLogo from "../../img/logos_google-icon.svg"
@@ -18,6 +18,19 @@ const SignIn = (props) => {
         props.onSignIn(email, password)
     }
     
+    const [signingUp, setSigningUp] = useState(true)
+    const [signingIn, setSigningIn] = useState(false)
+
+    const openSignInHandler = () => {
+        setSigningIn(true)
+        setSigningUp(false)
+    }
+
+    const openSignUpHandler = () => {
+        setSigningUp(true)
+        setSigningIn(false)
+    }
+
     return (
         <div className="signing">
             <div className="signing__content">
@@ -28,7 +41,7 @@ const SignIn = (props) => {
                 <div className="signing__form">
                     <h2 className="sub-heading2">Welcome</h2>
 
-                    <SigningForm signingUp={props.signingUp} signingIn={props.signingIn} onSignIn={signIn} />
+                    <SigningForm signingUp={signingUp} signingIn={signingIn} onSignIn={signIn} />
 
                     <div className="signing__or">
                         <div>
@@ -49,8 +62,8 @@ const SignIn = (props) => {
                     </div>
 
                     <div className="signing__option">
-                        {props.signingIn && <span>Don't have an account? <span className="text-primary cursor-pointer" onClick={props.onOpenSignUpForm}>Sign up</span></span>}
-                        {props.signingUp && <span>Already have an account?<span className="text-primary cursor-pointer" onClick={props.onOpenSignInForm}>Sign in</span></span>}
+                        {signingIn && <span>Don't have an account? <span className="text-primary cursor-pointer" onClick={openSignUpHandler}>Sign up</span></span>}
+                        {signingUp && <span>Already have an account?<span className="text-primary cursor-pointer" onClick={openSignInHandler}>Sign in</span></span>}
                         
                     </div>
                 </div>

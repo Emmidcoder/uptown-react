@@ -12,17 +12,14 @@ const SigningForm = (props) => {
 
     const emailChangeHandler = (e) => {
         setEnteredEmail(e.target.value)
-        console.log("hello");
     }
 
     const password1ChangeHandler = (e) => {
         setEnteredPassword1(e.target.value)
-        console.log("hi");
     }
     
     const password2ChangeHandler = (e) => {
         setEnteredPassword2(e.target.value)
-        console.log("hey");
     }
 
     const submitHandler = (e) => {
@@ -30,7 +27,6 @@ const SigningForm = (props) => {
         props.onSignIn(enteredEmail, enteredPassword1)
         
     }
-
 
     return (
         <form className="signin__form--content" onSubmit={submitHandler}>

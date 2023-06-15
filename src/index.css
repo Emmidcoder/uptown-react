@@ -46,7 +46,7 @@
     }
 
     .nav-bar{
-        @apply w-full z-20 absolute pt-3 cos-container flex justify-between items-start 
+        @apply w-full z-20 absolute top-0 pt-3 cos-container flex justify-between items-start 
     }
 
     .logo {

@@ -31,10 +31,10 @@ const NavBar = (props) => {
             <nav className={`navigation ${checked === true ? 'toggle-navigation' : '' }`}>
                 <div className="w-full flex flex-col md:flex-row md:justify-between gap-6">
                     <ul className="navigation__items">
-                        <NavigationLink href="/" onCloseNavHandler={closeNavHandler} className="navigation__item font-bold" content="Home" />
-                        <NavigationLink href="/a" onCloseNavHandler={closeNavHandler} className="navigation__item" content="About us" />
-                        <NavigationLink href="/properties" onCloseNavHandler={closeNavHandler} className="navigation__item" content="Properties" />
-                        <NavigationLink href="/contact" onCloseNavHandler={closeNavHandler} className="navigation__item" content="Contact us" />
+                        <NavigationLink href="/" onCloseNavHandler={closeNavHandler} onPageOpenHandler={props.onPageOpenHandler} className="navigation__item font-bold" content="Home" />
+                        <NavigationLink href="/a" onCloseNavHandler={closeNavHandler} onPageOpenHandler={props.onPageOpenHandler} className="navigation__item" content="About us" />
+                        <NavigationLink href="/properties" onCloseNavHandler={closeNavHandler} onPageOpenHandler={props.onPageOpenHandler} className="navigation__item" content="Properties" />
+                        <NavigationLink href="/contact" onCloseNavHandler={closeNavHandler} onPageOpenHandler={props.onPageOpenHandler} className="navigation__item" content="Contact us" />
                     </ul>
 
                     <div className="log">

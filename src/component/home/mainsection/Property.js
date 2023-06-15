@@ -8,11 +8,13 @@ const Property = (props) => {
         <div className="w-72">
             <div className="w-full">
                 <LazyLoadImage
-                    className="w-full"
+                    className=" w-full"
                     src={props.img}
                     placeholderSrc={props.lazyImg}
                     alt="house"
                     effect="blur"
+                    // height="18rem
+                    width="18rem"
                 />
             </div>
 
