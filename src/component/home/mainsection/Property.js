@@ -19,11 +19,11 @@ const Property = (props) => {
             </div>
 
             <div className="property__details">
-                <h5 className="font-bold">Lekki Ajah, Lagos</h5>
-                <p>Bed: 4 | Bath: 5 | SqFt: 120</p>
+                <h5 className="font-bold">{props.street || 'Lekki Ajah'}, {props.city || 'Lagos'}</h5>
+                <p>Bed: {props.beds || "4"} | Bath: {props.baths || "4"} | SqFt: {props.sqft || "120"}</p>
                 <div>
                     <button>Book now</button>
-                    <p>props.price</p>
+                    <p>{props.price}</p>
                 </div>
             </div>
         </div>

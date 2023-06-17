@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Properties from './component/pages/Properties' ;
+import Properties from './component/pages/Properties';
+import LoadingSpinner from './component/LoadingSpinner';
 import reportWebVitals from './reportWebVitals';
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";

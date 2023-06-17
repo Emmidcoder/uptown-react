@@ -3,6 +3,7 @@ import Header from './component/home/header/Header';
 import MainSections from './component/home/mainsection/MainSections';
 import SignIn from './component/signing/SignIn';
 import NavBar from './component/NavBar'
+import LoadingSpinner from './component/LoadingSpinner';
 
 
 function App() {
@@ -65,6 +66,8 @@ function App() {
       {loggedIn && <MainSections pageOpen={pageOpen} />}
 
       {loggedIn && <NavBar onPageOpenHandler={openPageHandler} />}
+
+      <LoadingSpinner/>
 
     </React.Fragment>
   );
