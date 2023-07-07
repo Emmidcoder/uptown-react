@@ -40,25 +40,29 @@ const Properties = () => {
     useEffect(() => {
         if (secondEffect.current === true) return
 
-        // const data = JSON.parse(localStorage.getItem('propertyDetails'))
-        // if (!data) return
-        // console.log(data);
-        // setPropertyDetails(data)
-
-        // if (data) return
+        const data = JSON.parse(localStorage.getItem('propertyDetails'))
+        if (data) {
+            setLoaded(true)
+            console.log(data);
+            setPropertyDetails(data)
+            return
+        } 
+        
         const propertiesAPI = async () => {
             try {
                 const response = await axios.request(options);
                 setPropertyDetails(response.data.data.home_search.results)
                 setLoaded(true)
+                console.log("Hello");
 
                 localStorage.setItem("propertyDetails", JSON.stringify(response.data.data.home_search.results))
             } catch (error) {
                 console.error(error);
             }
         }
-
         propertiesAPI()
+
+       
 
         return () => {
             secondEffect.current = true

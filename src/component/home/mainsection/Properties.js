@@ -1,14 +1,28 @@
 import React from "react";
-import SectionHeading from "../../../utilities/SectionHeading";
 import Property from "./Property";
-// import NavBar from "../NavBar";
+import { Link } from "react-router-dom";
 
 const Properties = () => {
     return (
         <section className="properties-sect">
             {/* <NavBar /> */}
+
+            <div className="mt-28">
+                <div className="sect-heading">
+                    <div>
+                        <h4 className="heading2">Listed Apartment</h4>
+                        <h2 className="sub-heading2">Our 1000 homes</h2>
+                    </div>
+
+
+                    <button className="btn-fill self-end">
+                        <Link to='/Properties'>See more</Link>
+                    </button>
+
+                </div>
+            </div>
             
-            <SectionHeading heading="Listed Apartment" subHeading="Our 1000 homes"/>
+            {/* <SectionHeading heading="Listed Apartment" subHeading="Our 1000 homes"/> */}
 
             <div className="properties">       
                 <Property img={require('../../../img/house2.png')} lazyImg={require('../../../img/house2-small.png')} price="5,500,000"/>
